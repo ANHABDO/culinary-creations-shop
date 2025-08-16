@@ -1,24 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CookCraft - Premium Cooking Tools & Professional Cookware</title>
-    <meta name="description" content="Discover premium cooking tools, professional cookware, chef knives, and kitchen utensils. Shop CookCraft for high-quality cooking equipment trusted by chefs worldwide." />
-    <meta name="author" content="CookCraft" />
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كوك كرافت - أدوات الطبخ المتميزة وأواني الطهي الاحترافية</title>
+    <meta name="description" content="اكتشف أدوات الطبخ المتميزة وأواني الطهي الاحترافية وسكاكين الطهاة وأدوات المطبخ. تسوق من كوك كرافت للحصول على معدات طبخ عالية الجودة يثق بها الطهاة حول العالم.">
+    <meta name="author" content="كوك كرافت">
+    
+    <meta property="og:title" content="كوك كرافت - أدوات الطبخ المتميزة وأواني الطهي الاحترافية">
+    <meta property="og:description" content="اكتشف أدوات الطبخ المتميزة وأواني الطهي الاحترافية وسكاكين الطهاة وأدوات المطبخ. تسوق من كوك كرافت للحصول على معدات طبخ عالية الجودة يثق بها الطهاة حول العالم.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>كوك كرافت</h1>
+                </div>
 
-    <meta property="og:title" content="CookCraft - Premium Cooking Tools & Professional Cookware" />
-    <meta property="og:description" content="Discover premium cooking tools, professional cookware, chef knives, and kitchen utensils. Shop CookCraft for high-quality cooking equipment trusted by chefs worldwide." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <!-- Desktop Navigation -->
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link active">الرئيسية</a>
+                    <a href="#cookware" class="nav-link">أواني الطهي</a>
+                    <a href="#knives" class="nav-link">السكاكين</a>
+                    <a href="#utensils" class="nav-link">الأدوات</a>
+                    <a href="#accessories" class="nav-link">الإكسسوارات</a>
+                </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+                <!-- Right side icons -->
+                <div class="nav-actions">
+                    <button class="nav-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="nav-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="nav-btn cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                    <button class="nav-btn mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Left content -->
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        أدوات الطبخ
+                        <span class="text-primary">المتميزة</span>
+                        <br>
+                        لكل طباخ
+                    </h1>
+                    <p class="hero-description">
+                        اكتشف مجموعتنا المختارة من أواني الطهي وسكاكين الطهاة والأدوات ذات الجودة الاحترافية.
+                        ارتقِ برحلتك في الطبخ مع الأدوات التي يثق بها الطهاة حول العالم.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-hero" id="shopBtn">تسوق المجموعة</button>
+                        <button class="btn btn-outline" id="catalogBtn">عرض الكتالوج</button>
+                    </div>
+                </div>
+
+                <!-- Right image -->
+                <div class="hero-image">
+                    <div class="hero-img-container">
+                        <img src="src/assets/hero-cooking.jpg" alt="أدوات الطبخ المتميزة مرتبة بشكل جميل">
+                    </div>
+                    <!-- Floating badge -->
+                    <div class="hero-badge">
+                        <p class="badge-title">شحن مجاني</p>
+                        <p class="badge-subtitle">للطلبات أكثر من 99$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="categories-container">
+            <div class="section-header">
+                <h2 class="section-title">تسوق حسب الفئة</h2>
+                <p class="section-description">
+                    ابحث عن الأدوات المثالية لكل مهمة طبخ. من أواني الطهي الاحترافية إلى السكاكين الدقيقة.
+                </p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card" data-category="cookware">
+                    <div class="category-content">
+                        <div class="category-icon cookware-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="category-name">أواني الطهي</h3>
+                        <p class="category-desc">مقالي وأواني وطاسات</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="knives">
+                    <div class="category-content">
+                        <div class="category-icon knives-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="category-name">السكاكين والأدوات</h3>
+                        <p class="category-desc">سكاكين الطهاة الاحترافية</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" data-category="utensils">
+                    <div class="category-content">
+                        <div class="category-icon utensils-icon">
+                            <i class="fas fa-spoon"></i>
+                        </div>
+                        <h3 class="category-name">الأدوات</h3>
+                        <p class="category-desc">أدوات الطبخ الأساسية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="products">
+        <div class="products-container">
+            <div class="section-header">
+                <h2 class="section-title">المنتجات المميزة</h2>
+                <p class="section-description">
+                    أدوات متميزة مختارة بعناية يجب أن تكون لدى كل طباخ محترف ومنزلي.
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/copper-pan.jpg" alt="مقلاة نحاسية متميزة">
+                        <button class="product-wishlist" data-product="1">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="product-badge">تخفيض</div>
+                    </div>
+                    
+                    <div class="product-content">
+                        <h3 class="product-name">مقلاة طباخ نحاسية متميزة</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="reviews">(127)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$149.99</span>
+                            <span class="original-price">$199.99</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-footer">
+                        <button class="btn btn-copper add-to-cart" data-product="1">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/wooden-utensils.jpg" alt="طقم أدوات خشبية">
+                        <button class="product-wishlist" data-product="2">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-content">
+                        <h3 class="product-name">طقم أدوات خشبية</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="reviews">(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$39.99</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-footer">
+                        <button class="btn btn-copper add-to-cart" data-product="2">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/chef-knife.jpg" alt="سكين طباخ احترافي">
+                        <button class="product-wishlist" data-product="3">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <div class="product-badge">تخفيض</div>
+                    </div>
+                    
+                    <div class="product-content">
+                        <h3 class="product-name">سكين طباخ احترافي</h3>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="reviews">(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$89.99</span>
+                            <span class="original-price">$110.99</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-footer">
+                        <button class="btn btn-copper add-to-cart" data-product="3">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف للسلة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Brand -->
+                <div class="footer-section">
+                    <h3 class="footer-brand">كوك كرافت</h3>
+                    <p class="footer-description">
+                        أدوات الطبخ المتميزة للطهاة المحترفين وعشاق الطبخ المنزلي.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" data-social="facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" data-social="email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#shipping">الشحن</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h4 class="footer-title">الفئات</h4>
+                    <ul class="footer-links">
+                        <li><a href="#cookware">أواني الطهي</a></li>
+                        <li><a href="#knives">السكاكين</a></li>
+                        <li><a href="#utensils">الأدوات</a></li>
+                        <li><a href="#accessories">الإكسسوارات</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-section">
+                    <h4 class="footer-title">ابق على اطلاع</h4>
+                    <p class="newsletter-text">
+                        احصل على أحدث العروض ونصائح الطبخ.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="بريدك الإلكتروني" id="newsletterEmail">
+                        <button class="btn btn-primary newsletter-btn" id="subscribeBtn">اشتراك</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 كوك كرافت. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
